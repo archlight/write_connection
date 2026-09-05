@@ -742,6 +742,7 @@ const LEGEND = [
   ["&#10022;","Star","Something done well. Two of these — keep both."]
 ];
 
+const TITLE = "A Surprise";
 const KEY = "aSurpriseDraft2.v1";
 let done = {};
 try{ done = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; }catch(e){ done = {}; }
@@ -929,10 +930,10 @@ let view = "clean";
 function renderDoc(){
   let html, heading;
   if(view === "model"){
-    heading = "A Surprise &mdash; model Draft 2";
+    heading = TITLE + " &mdash; model Draft 2";
     html = MODEL.map(p => `<p>${p}</p>`).join("");
   }else{
-    heading = view === "clean" ? "A Surprise &mdash; Draft 1, corrected" : "A Surprise &mdash; Draft 1, corrections shown";
+    heading = TITLE + (view === "clean" ? " &mdash; Draft 1, corrected" : " &mdash; Draft 1, corrections shown");
     html = CORRECTED.map(para => "<p>" + para.map(seg => {
       if(typeof seg === "string") return seg;
       let out = "";

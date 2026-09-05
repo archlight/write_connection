@@ -18,7 +18,11 @@ asserting an expansion.
 | `4Ws` | Where, when, what (and who) — the setting is missing | T2 W7 |
 | `SWAB` | Start With A Bang — a strong opening. A *positive* mark | T2 W7 |
 | Show, not Tell | Prove the feeling with a detail instead of naming it | T2 W7 |
-| `✳` | Star — something done well | T2 W7 |
+| `✳` | Star — a point worth noting. Usually praise, but also used to flag (`✳ Awkward sentence structure`) | T2 W6 |
+| `rep.` | Repetition — the same word or idea twice in one breath | T2 W6 |
+| `PVs` | Powerful verbs, starred as praise | T2 W6 |
+| Avoid negative descriptions | The narrator is judging a character instead of describing them | T2 W6 |
+| Unclear sequence of events | The reader cannot tell what happened, or in what order | T2 W6 |
 
 Unlabelled interventions are common too: an arrow to a margin question, a boxed
 phrase, a bracket around several lines, a caret marking an insertion point. Give
@@ -99,6 +103,36 @@ Where the teacher writes a model sentence, study its **shape** with the child an
 name the pattern. *Our faces lit up with bright smiles* = a body part + a verb +
 a detail. That formula transfers to every emotion — fear becomes *my hands turned
 cold and would not stay still*.
+
+### rep. — repetition
+
+Two shapes so far. A word used twice in one sentence (*turned red like a red
+apple*), and a sentence opening reused two lines apart (*I spotted … I spotted*).
+Teach the second one as a habit rather than a fix: look down the left edge of the
+draft and read only the first three words of each sentence.
+
+A comparison is the special case — *like a red apple* after *turned red* — where
+the rule is that a comparison must add something the reader does not already
+have. If both halves carry the same word, one half is doing no work.
+
+### Negative descriptions
+
+When the teacher strikes a judgement about a character (*so weird*, *she is a
+elderly lady*) and writes a physical action in its place, the lesson is bigger
+than the sentence: describe what a person *does*, not what you have decided they
+*are*. Actions let the reader form their own feeling; labels tell them what to
+think, and they usually think worse of the narrator for it.
+
+This matters most in a kindness or good-deed story, where a narrator who finds
+the other person strange makes the whole act ring false. Look for it whenever the
+composition is about helping someone.
+
+### Full stops for comma splices
+
+Two complete sentences joined by a comma. Give the child the test rather than the
+term: cover everything after the comma; if both halves could stand alone as
+sentences, the comma is too weak. A full stop, or a joining word — *and*, *but*,
+*because* — is what it needs.
 
 ### Positive marks
 

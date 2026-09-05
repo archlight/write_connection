@@ -31,4 +31,5 @@ automatically — drop in the photos and say "this week's composition".
 
 | Term | Week | Date | Composition | Draft |
 | --- | --- | --- | --- | --- |
+| 2 | 6 | 2026-08-08 | [A good deed](term-2/week-06-2026-08-08/) | 1 of 2 |
 | 2 | 7 | 2026-08-15 | [A Surprise](term-2/week-07-2026-08-15/) | 1 of 2 |
