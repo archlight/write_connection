@@ -323,6 +323,58 @@ figure{margin:0;background:var(--sheet);border:1px solid var(--edge);padding:12p
 figure img{display:block;width:100%;height:auto;border:1px solid var(--edge)}
 figcaption{font-family:var(--f-code);font-size:11px;color:var(--faint);letter-spacing:.06em;padding-top:10px}
 
+/* ---------- consolidated correction ---------- */
+.final{margin:72px 0 0;scroll-margin-top:66px}
+.seg{
+  display:inline-flex;border:1px solid var(--edge);background:var(--sheet);
+  border-radius:var(--radius);overflow:hidden;margin:0 0 6px;flex-wrap:wrap;
+}
+.seg button{
+  font-family:var(--f-ui);font-size:13.5px;font-weight:500;color:var(--muted);
+  background:none;border:none;border-right:1px solid var(--edge);
+  padding:9px 16px;cursor:pointer;transition:background-color .15s,color .15s;white-space:nowrap;
+}
+.seg button:last-child{border-right:none}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-selected="true"]{background:var(--red-soft);color:var(--red);font-weight:600}
+.seg button:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.final-bar{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin:0 0 20px}
+.final-bar .spacer{margin-left:auto}
+.doc-note{
+  font-size:14.5px;color:var(--muted);max-width:66ch;margin:0 0 18px;
+  border-left:2px solid var(--red-line);padding-left:14px;line-height:1.55;
+}
+.doc-note b{color:var(--ink);font-weight:600}
+.doc{
+  background:var(--sheet);border:1px solid var(--edge);box-shadow:var(--shadow);
+  padding:38px clamp(20px,4vw,54px) 42px;
+}
+.doc h4{
+  font-family:var(--f-read);font-size:23px;font-weight:700;margin:0 0 26px;
+  letter-spacing:-.015em;padding-bottom:16px;border-bottom:1px solid var(--edge);
+}
+.doc p{
+  font-family:var(--f-read);font-size:18px;line-height:1.95;color:var(--ink);
+  margin:0 0 20px;max-width:64ch;text-indent:0;
+}
+.doc p:last-child{margin:0}
+.doc del{
+  text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:1.5px;
+  color:var(--muted);
+}
+.doc ins{
+  text-decoration:none;color:var(--red);
+  box-shadow:inset 0 -2px 0 var(--red-soft);
+}
+.doc del + ins{margin-left:.3em}
+.doc del{margin-right:.05em}
+.doc .sg{
+  border-bottom:1.5px dotted var(--green);color:var(--green);
+}
+.doc.clean ins{color:var(--ink);box-shadow:none}
+.doc.clean .sg{color:var(--green);border-bottom:1.5px dotted var(--green)}
+.wc{font-family:var(--f-code);font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums;white-space:nowrap;padding-bottom:9px}
+
 footer{margin:64px 0 0;padding-top:22px;border-top:1px solid var(--edge);font-size:13px;color:var(--faint);max-width:70ch}
 
 @media (max-width:720px){
@@ -347,7 +399,7 @@ footer{margin:64px 0 0;padding-top:22px;border-top:1px solid var(--edge);font-si
     <div>
       <p class="eyebrow">The Write Connection &middot; Term 2, Week 7 &middot; Marked 15 / 8 / 26</p>
       <h1>A Surprise,<br><em>Draft Two</em></h1>
-      <p class="dek">Every red mark on your first draft, opened up. Tap any underlined word or any remark in the teacher&rsquo;s hand to see what the code means, why it was marked, and what to write instead. Two big moves for the rewrite are waiting at the bottom.</p>
+      <p class="dek">Every red mark on your first draft, opened up. Tap any underlined word or any remark in the teacher&rsquo;s hand to see what the code means, why it was marked, and what to write instead. Two big moves for the rewrite &mdash; and the whole composition written out correctly &mdash; are waiting at the bottom.</p>
     </div>
     <div class="stamp">
       Draft <b>1 of 2</b><br>
@@ -426,6 +478,22 @@ footer{margin:64px 0 0;padding-top:22px;border-top:1px solid var(--edge);font-si
         <p class="model"><span class="was">The day I experienced a surprised was a good day, because (I wish I could had today&rsquo;s day twice!)</span><br><br><span class="now">The day I experienced that surprise was a joyful day. I wished I could revisit that pleasant moment again &mdash; not for the test I had finished, but for the warm little weight that had fallen asleep in my lap.</span></p>
       </div>
     </article>
+  </section>
+
+  <section class="final" id="final">
+    <h2 class="sec-h">The whole composition, put right</h2>
+    <div class="final-bar">
+      <div class="seg" role="tablist" aria-label="Which version to show">
+        <button role="tab" data-view="clean" aria-selected="true">Clean copy</button>
+        <button role="tab" data-view="marked" aria-selected="false">What changed</button>
+        <button role="tab" data-view="model" aria-selected="false">Model Draft 2</button>
+      </div>
+      <span class="spacer"></span>
+      <span class="wc" id="wc">&mdash;</span>
+      <button class="btn" id="copybtn">Copy text</button>
+    </div>
+    <p class="doc-note" id="docnote"></p>
+    <div class="doc" id="doc"></div>
   </section>
 
   <section class="scans">
@@ -789,4 +857,126 @@ document.getElementById("t-none").addEventListener("click", () => {
   document.querySelectorAll(".slot").forEach(s => { s.innerHTML = ""; });
   document.querySelectorAll("[data-a]").forEach(b => b.setAttribute("aria-expanded","false"));
 });
+
+/* ---- consolidated correction ------------------------------------------
+   Each paragraph is a list of segments:
+   "text"            unchanged, straight from your draft
+   {d:…}             deleted        {i:…} inserted        {d:…,i:…} replaced
+   s:true            our suggestion, where the mark asked a question
+                     instead of supplying the word                        */
+const CORRECTED = [
+  ['&ldquo;This is horrible!&rdquo; I ',
+   {d:'said angrily', i:'grumbled,'}, ' ',
+   {d:'looking at', i:'glaring at'}, ' the test paper',
+   {d:' angrily'}, '. ',
+   {d:'Me and my friends', i:'My friends and I'}, ' were doing a terrible ',
+   {i:'Mathematics ', s:true}, 'test paper',
+   {i:' in school on a Monday morning'}, '.'],
+
+  [{d:'And', i:'Before the test,'}, ' my teacher ',
+   {d:'has', i:'told us she had'}, ' a memorable ',
+   {d:'surprice', i:'surprise'},
+   {i:' after the test'}, ', while my teacher announced the rules of the test paper. As my teacher ',
+   {d:'finnally finish', i:'finally finished'}, ' announcing the rules, she ',
+   {d:'stealthly', i:'stealthily'}, ' ',
+   {d:'look at secret puppy', i:'glanced at a box on her table'}, '.',
+   {d:' (And he looks fine, but she&rsquo;s worried about showing, and when he shows she&rsquo;s worried about when it&rsquo;s wrong.)'}],
+
+  [{d:'Finnally', i:'Finally'}, ', the students finished ',
+   {d:'there', i:'their'}, ' test paper. &ldquo;This is my chance,&rdquo; our teacher ',
+   {d:'mumured', i:'murmured'}, ' to herself, while my friends and ',
+   {d:'we return', i:'I returned'}, ' the ',
+   {d:'papers to our teachers', i:'paper to our teacher&rsquo;s'}, ' desk, our teacher ',
+   {d:'open', i:'opened'}, ' the box and ',
+   {d:'&ldquo;Surprise!&rdquo; &ldquo;Yahh!&rdquo;',
+    i:'&ldquo;Surprise!&rdquo; she exclaimed, revealing a golden-brown puppy. &ldquo;Yay!&rdquo;', s:true}, ' ',
+   {d:'my friends and I', i:'We'}, ' shouted ',
+   {d:'uncontrolably', i:'uncontrollably'}, '. ',
+   {d:'They', i:'We'}, ' played ',
+   {i:'with the puppy '}, 'and ',
+   {d:'they felt happy.', i:'our faces lit up with bright smiles.'}],
+
+  ['The day I experienced ',
+   {d:'a surprised', i:'that surprise'}, ' was a ',
+   {d:'good', i:'joyful'}, ' day',
+   {d:', because (I wish I could had today&rsquo;s day twice!)',
+    i:'. I wished I could revisit that pleasant moment again.'}]
+];
+
+const MODEL = [
+  '&ldquo;This is horrible!&rdquo; I grumbled, glaring at the Mathematics paper on my desk. My friends and I were sitting our Term 2 test in the school hall on a grey Monday morning, and the fan above us was not working.',
+  'Before the test began, my teacher told us she had a memorable surprise waiting for us afterwards. Then she announced the rules, and the hall went quiet except for the scratching of pencils.',
+  'I read the first question three times before my hand would move. My fingers gripped my pencil so tightly that they began to ache. When I reached the last page, there was a word problem I could not solve. I rubbed out my answer twice, checked the clock, and tried again.',
+  'When I finally put my pencil down, my shoulders dropped and I let out a long breath. It felt as if someone had lifted a bag of books off my back.',
+  'That was when I noticed it. A large cardboard box was sitting on my teacher&rsquo;s table, and one corner of the lid kept lifting and settling, lifting and settling, as if something inside were breathing. What could be in there? I could not take my eyes off it for the rest of the hour.',
+  'Finally, the students finished their test papers. &ldquo;This is my chance,&rdquo; our teacher murmured to herself, while my friends and I returned our papers to her desk. She placed both hands on the lid and lifted it slowly. A tiny whimper escaped from inside. &ldquo;Surprise!&rdquo; she exclaimed, holding up a golden-brown puppy no bigger than her two hands. One ear flopped over its eye, its nose was wet and black, and its tail was already beating against her wrist.',
+  '&ldquo;Yay!&rdquo; we shouted uncontrollably. We took turns carrying the puppy around the hall and letting it lick our fingers. Our faces lit up with bright smiles, and even the boy who had groaned loudest during the test was laughing.',
+  'The day I experienced that surprise was a joyful day. I wished I could revisit that pleasant moment again &mdash; not for the test I had finished, but for the warm little weight that had fallen asleep in my lap.'
+];
+
+const NOTES = {
+  clean: 'Your own composition with all <b>29 marks applied</b> and nothing else added &mdash; this is what Draft 1 should have looked like. Words with a <span class="sg">dotted green underline</span> are our suggestion, not your teacher&rsquo;s: she asked a question there (<em>what test? &middot; describe the puppy</em>) rather than writing the answer in, so choose your own word.',
+  marked: 'The same corrected copy with every change left showing &mdash; <del>struck out</del> is what came out, <ins>red</ins> is what went in. Read this one first, then check yourself against the clean copy.',
+  model: 'Not your work, and not what you should copy out. This is how the same story could read once <b>Recommendation 1 and 2</b> are done: the middle rebuilt from your own point of view, the reveal given room to breathe. Notice it is longer in the middle and at the surprise, and shorter nowhere.'
+};
+
+const docEl = document.getElementById("doc");
+const wcEl = document.getElementById("wc");
+const noteEl = document.getElementById("docnote");
+let view = "clean";
+
+function renderDoc(){
+  let html, heading;
+  if(view === "model"){
+    heading = "A Surprise &mdash; model Draft 2";
+    html = MODEL.map(p => `<p>${p}</p>`).join("");
+  }else{
+    heading = view === "clean" ? "A Surprise &mdash; Draft 1, corrected" : "A Surprise &mdash; Draft 1, corrections shown";
+    html = CORRECTED.map(para => "<p>" + para.map(seg => {
+      if(typeof seg === "string") return seg;
+      let out = "";
+      if(seg.d && view === "marked") out += `<del>${seg.d}</del>`;
+      if(seg.i) out += `<ins${seg.s?' class="sg"':''}>${seg.i}</ins>`;
+      return out;
+    }).join("") + "</p>").join("");
+  }
+  docEl.className = "doc" + (view === "marked" ? "" : " clean");
+  docEl.innerHTML = `<h4>${heading}</h4>${html}`;
+  noteEl.innerHTML = NOTES[view];
+  const words = docEl.querySelectorAll("p");
+  let text = "";
+  words.forEach(p => {
+    const c = p.cloneNode(true);
+    c.querySelectorAll("del").forEach(d => d.remove());
+    text += c.textContent.trim() + "\n\n";
+  });
+  wcEl.textContent = text.trim().split(/\s+/).length + " words";
+  docEl.dataset.plain = text.trim();
+}
+
+document.querySelectorAll('.seg [data-view]').forEach(b => {
+  b.addEventListener("click", () => {
+    view = b.dataset.view;
+    document.querySelectorAll('.seg [data-view]').forEach(o =>
+      o.setAttribute("aria-selected", String(o === b)));
+    renderDoc();
+  });
+});
+
+document.getElementById("copybtn").addEventListener("click", async e => {
+  const btn = e.currentTarget;
+  try{
+    await navigator.clipboard.writeText(docEl.dataset.plain);
+    btn.textContent = "Copied";
+  }catch(err){
+    const r = document.createRange();
+    r.selectNodeContents(docEl);
+    const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    btn.textContent = "Selected — press Ctrl/Cmd+C";
+  }
+  setTimeout(() => { btn.textContent = "Copy text"; }, 2200);
+});
+
+renderDoc();
+
 </script>
