@@ -122,6 +122,7 @@ h1 em{font-style:italic;color:var(--red)}
   text-transform:uppercase;color:var(--red);
   border:1px solid var(--red-line);background:var(--red-soft);
   padding:2px 6px;border-radius:2px;white-space:nowrap;display:inline-block;
+  line-height:1.35;vertical-align:baseline;
 }
 .code.good{color:var(--green);border-color:color-mix(in srgb, var(--green) 40%, transparent);background:var(--green-soft)}
 
@@ -313,8 +314,8 @@ h1 em{font-style:italic;color:var(--red)}
 }
 .model .now{background:var(--green-soft)}
 .beat{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.beat li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;font-size:15px;line-height:1.6;color:var(--ink-soft);max-width:68ch}
-.beat li::before{content:"—";color:var(--red);font-family:var(--f-code);font-size:13px;line-height:1.75}
+.beat li{position:relative;padding-left:22px;font-size:15px;line-height:1.6;color:var(--ink-soft);max-width:68ch}
+.beat li::before{content:"—";position:absolute;left:0;top:0;color:var(--red);font-family:var(--f-code);font-size:13px;line-height:1.6}
 
 /* ---------- scans ---------- */
 .scans{margin:72px 0 0;border-top:1px solid var(--edge);padding-top:26px}

@@ -139,7 +139,25 @@ focus rings (`outline:2px solid var(--red); outline-offset:2px`), and a
 `prefers-reduced-motion` block. Wide content scrolls in its own container; the
 body never scrolls sideways.
 
+Never put `display:grid` or `display:flex` on an element whose content is a
+**sentence**. Every child element inside becomes its own grid or flex item, so
+the `<b>`, `<em>` and code badges in running prose get torn out of the text and
+dropped into their own cells — the paragraph shreds into one word per line and
+badges land on top of neighbouring words. Grid is for label/value pairs whose
+children are exactly the cells you defined. For a bullet, use a hanging indent
+instead:
+
+```css
+li{position:relative;padding-left:22px}
+li::before{content:"—";position:absolute;left:0;top:0;color:var(--red)}
+```
+
+A code badge used inline in prose also needs `line-height:1.35` and
+`vertical-align:baseline`, or its padding and border inflate that one line box
+and the paragraph's leading goes uneven.
+
 Look at the rendered page once before publishing — Chromium is at
-`/opt/pw-browsers/chromium` — then make one pass of fixes. The things that
-consistently show up in that look are inline red corrections inheriting the
-wrong text-decoration, and struck/inserted words running together.
+`/opt/pw-browsers/chromium` — and scroll through **every** section, not just the
+top: the layout bugs so far have all been below the fold. The ones that recur
+are inline red corrections inheriting the wrong text-decoration,
+struck/inserted words running together, and the grid-on-a-sentence bug above.
