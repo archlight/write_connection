@@ -23,6 +23,10 @@ asserting an expansion.
 | `PVs` | Powerful verbs, starred as praise | T2 W6 |
 | Avoid negative descriptions | The narrator is judging a character instead of describing them | T2 W6 |
 | Unclear sequence of events | The reader cannot tell what happened, or in what order | T2 W6 |
+| `(v)` | Verb choice — same idea as `PV`, this marker's shorthand | T3 W10 |
+| `5-senses` | Starred praise for writing through a sense, not just sight | T3 W10 |
+| `Precise vocab` | Starred praise for a word that names exactly one thing | T3 W10 |
+| Logic gap | Two sentences are each fine, but the reader falls into the hole between them | T3 W10 |
 
 Unlabelled interventions are common too: an arrow to a margin question, a boxed
 phrase, a bracket around several lines, a caret marking an insertion point. Give
@@ -114,6 +118,36 @@ draft and read only the first three words of each sentence.
 A comparison is the special case — *like a red apple* after *turned red* — where
 the rule is that a comparison must add something the reader does not already
 have. If both halves carry the same word, one half is doing no work.
+
+### Logic gaps
+
+Her own phrase, from the margin: *(Logic gap. Did they continue performing or not?)*
+These are the hardest marks for a child to see, because every sentence is
+correct on its own — the fault is in what sits between two sentences. Three
+shapes so far:
+
+- **A detail that contradicts the scene.** Curtains *about to close* while an
+  audience waits to see the dancers.
+- **A word carried over from a nearby sentence.** *Clambered to my teeth*, two
+  lines after teeth chattering.
+- **An event the writer lived through and never wrote down.** A fall, then
+  straight to being comforted, with no word on whether the show went on.
+
+Teach the test rather than the term: read the draft as though you had not been
+there, and every time you supply something from memory to make a sentence make
+sense, that thing belongs on the page. When the teacher writes the missing
+sentence in herself rather than asking a question, the gap was too big to hint at.
+
+### Feeling in the wrong place
+
+*Why would she cry here? Use this description later on instead.* Worth watching
+for as its own category: the child has a strong image but has attached it to the
+wrong moment — tears while the audience applauds, none when they actually fall.
+
+The important half of this mark is *instead*, not *why*. The teacher is not
+deleting the image; she liked it enough to write it back in further down the
+page. Present it to the child as a move, never a cut, or they learn to stop
+reaching for strong images at all.
 
 ### Negative descriptions
 

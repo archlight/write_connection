@@ -33,3 +33,4 @@ automatically — drop in the photos and say "this week's composition".
 | --- | --- | --- | --- | --- |
 | 2 | 6 | 2026-08-08 | [A good deed](term-2/week-06-2026-08-08/) | 1 of 2 |
 | 2 | 7 | 2026-08-15 | [A Surprise](term-2/week-07-2026-08-15/) | 1 of 2 |
+| 3 | 10 | 2026-09-19 | [A performance](term-3/week-10-2026-09-19/) | 1 of 2 |
