@@ -27,6 +27,9 @@ asserting an expansion.
 | `5-senses` | Starred praise for writing through a sense, not just sight | T3 W10 |
 | `Precise vocab` | Starred praise for a word that names exactly one thing | T3 W10 |
 | Logic gap | Two sentences are each fine, but the reader falls into the hole between them | T3 W10 |
+| Too vague | A word that was clear in the writer's head and empty on the page | T3 W11 |
+| Avoid using too much speech | Dialogue spent on politeness instead of on what turns the story | T3 W11 |
+| Simile | Starred praise for a comparison that earns its place | T3 W11 |
 
 Unlabelled interventions are common too: an arrow to a margin question, a boxed
 phrase, a bracket around several lines, a caret marking an insertion point. Give
@@ -118,6 +121,39 @@ draft and read only the first three words of each sentence.
 A comparison is the special case — *like a red apple* after *turned red* — where
 the rule is that a comparison must add something the reader does not already
 have. If both halves carry the same word, one half is doing no work.
+
+### Too vague
+
+The largest single category on T3 W11, and the one most worth teaching as a
+habit rather than a list of fixes. Every instance is a word that was clear in
+the child's head and empty on the page:
+
+- **School shorthand** — *WA1*, the name of a class, a nickname. If a stranger
+  would need it explained, it does not belong in a composition.
+- **A category where a specific is needed** — *my pills* for *my antihistamine
+  pills*, *our food* for *our food orders*.
+- **A thing that does not exist** — *a smoke sauce allergy*. Nobody is allergic
+  to a flavour. When the vague noun is the one the title promises, this stops
+  being a word-level fix and becomes the whole rewrite.
+
+The test to give the child: read each sentence as somebody who was not there,
+and stop at every noun that could mean five different things.
+
+A precise noun often carries backstory for free. *Antihistamine* quietly says
+this has happened before and somebody planned for it — a whole fact, in one word.
+
+### Too much speech
+
+*(Avoid using too much speech)*. Look at what the dialogue is spent on. Characters
+being polite to each other — thanking, agreeing, saying it is no problem — reveals
+nothing and costs lines, usually at the moment the story should be speeding up.
+Dialogue earns its place when characters disagree, decide something, or show the
+reader something they could not otherwise see.
+
+A useful pairing when both appear on one paper: keep the shout that describes the
+narrator from the outside (*you look like you have a million ants on your face*),
+cut the thank-yous. Same composition, opposite verdicts, and the reason is the
+same test.
 
 ### Logic gaps
 
