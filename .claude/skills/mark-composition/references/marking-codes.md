@@ -30,6 +30,15 @@ asserting an expansion.
 | Too vague | A word that was clear in the writer's head and empty on the page | T3 W11 |
 | Avoid using too much speech | Dialogue spent on politeness instead of on what turns the story | T3 W11 |
 | Simile | Starred praise for a comparison that earns its place | T3 W11 |
+| Sequencing (`Seq`) | The order on the page is not the order it happened in. Margin remark, no replacement written | T4 W2 |
+| Describe the picture (`Describe`) | The story is told from a picture; she asks what a person in it is doing and often writes the answer in | T4 W2 |
+| `Start` | Our plain-word code for an opener she wrote in without a label: *Soon,* *However,* *Suddenly,* *After that,* | T3 W11 |
+| `Swap` | Our plain-word code: a phrase struck and replaced by a clearer one (*to treat my injuries*) | T4 W2 |
+| Personification | Starred praise for giving a non-living thing a human behaviour (*wheels complained*) | T4 W2 |
+| `FATS` | Starred praise. Read as Feelings, Actions, Thoughts, Speech — the ways to show what a character is going through | T4 W2 |
+| ✓ tick | Small red tick under a word or phrase: praise for an exact word. She does not say why | T4 W2 |
+| What happened next? | A logic gap where the cause of a result is missing (*crashed into the tree*, then a bruised leg). Often gives an example in brackets | T4 W2 |
+| Explain this | The ending raises a question it does not answer; she wants it shown | T4 W2 |
 
 Unlabelled interventions are common too: an arrow to a margin question, a boxed
 phrase, a bracket around several lines, a caret marking an insertion point. Give
@@ -203,6 +212,18 @@ Two complete sentences joined by a comma. Give the child the test rather than th
 term: cover everything after the comma; if both halves could stand alone as
 sentences, the comma is too weak. A full stop, or a joining word — *and*, *but*,
 *because* — is what it needs.
+
+### Sequencing and the picture prompts
+
+When the composition is told from a picture, her longest margin notes are about the picture, not the grammar. Three shapes in T4 W2:
+
+- **Order.** *He needs to alight the car first before zooming into the park.* Two events in one sentence, in the wrong order. She strikes the offender and leaves the rebuilding to the child.
+- **A person who vanishes.** *(Describe the picture: what was Dad doing?)* then *(Not exactly! What action does the picture show?)*. She writes the actions in (*supported my back*, *slowly let go of my back*), and together they are a pair the reader remembers. Teach the child to ask what a second person's hands are doing.
+- **A missing event.** *(What happened next? e.g. crashed into the tree…)*. The result is on the page and the cause is not. Same test as a logic gap.
+
+### Explain this
+
+*Did he successfully learn how to cycle? Explain this.* The ending hopes or resolves but never reports the outcome. Teach it as: show one moment where it works, rather than saying it did. Depends on the middle of the story being complete, so recommend it second.
 
 ### Positive marks
 

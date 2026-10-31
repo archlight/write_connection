@@ -40,3 +40,4 @@ automatically — drop in the photos and say "this week's composition".
 | 2 | 7 | 2026-08-15 | [A Surprise](term-2/week-07-2026-08-15/) | 1 of 2 |
 | 3 | 10 | 2026-09-19 ⚠ | [A performance](term-3/week-10-2026-09-19/) | 1 of 2 |
 | 3 | 11 | 2026-09-07 | [An allergic reaction](term-3/week-11-2026-09-07/) | 1 of 2 |
+| 4 | 2 | 2026-10-10 | [Learning to ride a bicycle](term-4/week-02-2026-10-10/) | 1 of 2 |
